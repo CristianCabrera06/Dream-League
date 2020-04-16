@@ -1,0 +1,24 @@
+import math
+from math import factorial
+# Se pide el promedio.
+a = int(input("Ingrese el promedio de goles por partido: "))
+# Se analiza la variable la cual se va efectuar
+b = int(input("Ingrese el número de goles a analizar: "))
+# Se realiza la operacion del promedio del problema elevado a la variable a analizar
+x = a**b
+# Se realiza el factorial de la variable analizada
+y = factorial(b)
+# Se realiza la division entre el resultado de promedio y el factorial 
+re =x/y
+# Se multiplica el resultado de la division con el exponente elvado a el promedio del problema .
+to = re*math.exp(-a)
+# Se multiplica por 100 para obtener el resultado en porcentaje.
+po = to * 100
+#Resultado sin aplicar el porcentaje es
+print ("El resultado es en decimal es: ",to)
+# Resultado aplicando el porcentaje es
+print ("El resultado en porcentaje que anote es: ",po,"%")
+#Resultado aplicando el corte de el resultado a un entero con 2 decimales.
+print ("El resultado acortando el porcentaje que anote es: ","{0:.2f}".format(po),"%")
+# Resultado aplicando la ley de aproximacion del 0.05
+print ("Utilizando la ley de aproximacion que anote es: ",round(po,1),"%")
